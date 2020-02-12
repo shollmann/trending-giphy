@@ -10,13 +10,13 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 internal class TrendingViewModel : ViewModel() {
-    val trending = MutableLiveData<List<Gif>>()
+    val trendingList = MutableLiveData<List<Gif>>()
 
     fun loadTrending() = GlobalScope.launch(Dispatchers.Main) {
         val serviceResponse = GiphyRepository.getTrending()
 
         launch(Dispatchers.Main) {
-            trending.value = (serviceResponse.response as Trending).data
+            trendingList.value = (serviceResponse.response as Trending).data
         }
     }
 }

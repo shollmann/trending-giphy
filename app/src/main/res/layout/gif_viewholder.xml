@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
 
+<!--        <variable-->
+<!--            name="gif"-->
+<!--            type="com.shollmann.giphy.model.Gif" />-->
+
+    </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -10,15 +15,19 @@
         android:orientation="horizontal"
         android:padding="8dp">
 
+<!--        android:src="@{gif.contentUrl}"-->
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             tools:background="@tools:sample/avatars" />
 
+<!--        android:text="@{gif.title}"-->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
             android:textSize="16sp"
             tools:text="This is my giphy title" />
 
